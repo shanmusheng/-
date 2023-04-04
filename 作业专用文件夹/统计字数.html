@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+		var allchar = prompt("请输入字符串"),
+			charwhere = prompt("请输入要查询的单个字符"),
+			sum = 0;
+		call(allchar, charwhere);
+		function call(str, charwhere) {
+			//直接用str.split("")得到的数组进行forEach,减少声明变量
+			str.split("").forEach((element) => {
+				if (element == charwhere) sum++;
+			});
+			alert(charwhere + "出现的次数是" + sum + "次");
+		}
+	</script>
+</html>
